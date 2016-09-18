@@ -1,0 +1,23 @@
+# Zadanie
+Napisz skrypt w JavaScript, który stworzy widget – bardziej rozbudowaną wersję elementu <select>*. Wszystko to zgodnie z zasadami tzw. progressive enhancement**.
+
+Elementy <select> mają bardzo ograniczone możliwości stylowania przy pomocy CSS. Trudne lub wręcz niemożliwe jest na przykład umieszczenie wewnątrz niego obrazków albo kilku linijek ostylowanego tekstu. Zadanie polega na stworzeniu widgetu, który by na to pozwalał. Jest to jednak trudniejsze niż się może pozornie wydawać! Nasz JavaScriptowy widget musi zachować wszystkie funkcje, które posiada element <select> natywnie.
+
+## Założenia i wymagania:
+- na stronie w kodzie HTML jest działający <select> z opowiednimi opcjami, wartościami, klasami itd.
+- skrypt powinien wziąć ten select i przekształcić/dodać inny kod HTML, który pozwoli na bardziej rozbudowane stylowanie przy pomocy CSS
+- nowy “select” ma umożliwiać wybieranie opcji przy pomocy myszki i klawiatury oraz dawać wszystkie możliwości, które daje select natywnie
+- zmiana opcji w nowym “selekcie” powinna powodować zmianę wartości oryginalnego elementu <select>
+- zmiana opcji w oryginalnym selekcie powinna powodować zmianę wyświetlanej wartości w nowym "selekcie"
+- musi być możliwość wykorzystania tego samego kodu w kilku miejscach, na różnych selectach
+- wybranie opcji i wysłanie formularza powinno prawidłowo działać przy wyłączonym JavaScripcie
+
+## Tagi:
+- progressive enhancement
+- dostępność (accessibility), a11y
+
+Rozwiązania wrzucamy na Codepen / jsfiddle / plnkr / jsbin, a następnie pod tym wydarzeniem dodajemy posta z linkiem i krótkim komentarzem do kodu :) Na rozwiązanie przewidziane są dwa tygodnie.
+
+*w rzeczywistości stworzenie takiego rozbudowanego widgetu, który jednocześnie zachowa wszystkie natywne możliwości oraz będzie dostępny (przykładowo dla osób niewidomych) jest bardzo trudne; dlatego poleca się skorzystanie z gotowych popularnych skryptów, które są przetestowane w boju. Tutaj jednak piszemy coś takiego samemu, aby się czegoś nauczyć i zrozumieć na czym polega progressive enhancement.
+
+**kiedyś czytałem taką książkę, która jest (albo była) bardzo dobrym źródłem wiedzy na ten temat: “designing with progressive enhancement”. Istnieje również wersja polskojęzyczna.

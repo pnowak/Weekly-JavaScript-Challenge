@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang=pl>
+<head>
+    <meta charset=utf-8>
+    <title>Zadanie 3</title>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <h2>#Zadanie 3</h2>
+    </header>
+    <section>
+        <section class="profil">
+            <section class="form">
+                <form action="/" method="get" id="form">
+                    <fieldset>
+                        <label for="form-comment">Dane Klienta</label>
+                        <input id="firstname" type="text" placeholder="firstname">
+                        <input id="lastname" type="text" placeholder="lastname">
+                        <input id="kulica" type="text" placeholder="ulica">
+                        <input id="kmiasto" type="text" placeholder="miasto">
+                        <input id="kkod" type="text" placeholder="kod-pocztowy">
+                    </fieldset>
+                    <fieldset>
+                        <label for="form-comment">Dane Firmy</label>
+                        <input id="name" type="text" placeholder="tname">
+                        <input id="fulica" type="text" placeholder="ulica">
+                        <input id="fmiasto" type="text" placeholder="miasto">
+                        <input id="fkod" type="text" placeholder="kod-pocztowy">
+                        <input id="nip" type="number" placeholder="NIP">
+                    </fieldset>
+                    <fieldset>
+                        <label for="form-comment">Kwota</label>
+                        <input id="money" type="number" placeholder="amount" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Wystawiona <input id="wystawiona" type="radio" name="stan"></label><br>
+                        <label>Doręczona <input id="doreczona" type="radio" name="stan"></label><br>
+                        <label>Opłacona <input id="oplacona" type="radio" name="stan"></label><br>
+                        <label>Spóźniona <input id="spozniona" type="radio" name="stan"></label><br>
+                    </fieldset>
+                </form>
+            </section> 
+        </section>
+        <section id="result">
+            <div id="count" style="color: #42454c;">35 charakters left</div>
+        </section>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body></html> 

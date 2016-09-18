@@ -1,6 +1,8 @@
-Trzecie zadanie skupia się na przechowywaniu danych w przeglądarce. Jest to jedna z typowych funkcji większości aplikacji internetowych.
+Trzecie zadanie skupia się na przechowywaniu danych w przeglądarce. 
+Jest to jedna z typowych funkcji większości aplikacji internetowych.
 
-Może się to wydać wyjątkowo proste, dlatego warto się tutaj skupić na czytelności kodu i odpowiednim podziale odpowiedzialności pomiędzy poszczególne funkcje.
+Może się to wydać wyjątkowo proste, dlatego warto się tutaj skupić na czytelności kodu 
+i odpowiednim podziale odpowiedzialności pomiędzy poszczególne funkcje.
 
 # Zadanie:
 Stwórz aplikację w JavaScript i HTML. Aplikacja po uruchomieniu ma wyświetlić prosty formularz (opis poniżej). Wszystkie zmiany wprowadzone w formularzu muszą być widoczne po ponownym otwarciu/odświeżeniu strony w tej samej przeglądarce.

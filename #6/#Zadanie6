@@ -1,0 +1,21 @@
+Zadanie numer 6 polega na wykonaniu prostego, dynamicznego pola pozwalającego na dodawanie „tagów” w formularzu, np. pod wpisem na blogu albo artykułem.
+Taki komponent jest bardzo popularnym elementem wielu aplikacji internetowych.
+
+# Zadanie
+Stwórz aplikację w JavaScript i HTML. Aplikacja ma wyświetlać pole do dodawania tagów w formularzu.
+
+## Założenia i wymagania:
+- aplikacja wyświetla pole tekstowe
+- użytkownik może wpisywać tam dowolne słowa (tagi)
+- po wciśnięciu [enter] lub zatwierdzeniu przyciskiem, wpisany tekst jest widoczny obok pola tekstowego w postaci „tagu”, a pole staje się puste
+- wpisywanie tagów można powtarzać wielokrotnie
+- jeśli użytkownik wpisze kilka słów oddzielonych przecinkiem to powinny one zostać potraktowane jak kilka tagów
+- każdy tag powinien mieć możliwość usunięcia – na przykład małym krzyżykiem obok niego
+- nie wpisanie niczego, lub wpisane wyłącznie białych znaków nie powinno umożliwiać dodania tagu
+- Dodatkowo: wpisane tagi mogą być zapisane w przeglądarce, tak aby przy kolejnym otwarciu strony były widoczne
+- zadanie przewiduje korzystanie wyłącznie z czystego JavaScriptu, bez dodatkowych bibliotek typu jQuery czy Bootstrap
+- oceniane będą: Prawidłowe działanie, obsługa błędów, czytelność kodu
+
+## Hasła do Googlania:
+- tablica, Array
+- token field

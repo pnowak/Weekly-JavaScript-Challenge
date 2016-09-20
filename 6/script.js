@@ -1,41 +1,47 @@
-var text = {
+'use strict';
 
-    result : get('result'),
+class Tag {
+
+    constructor() {}
+
+    get(id) {
+        return document.getElementById(id);
+    }
 
     createTag(value) {
-        var frag, tag;
+        const result = this.get('result');
+        const frag = document.createDocumentFragment();
+        const tag = document.createElement('li');
+        const content = document.createTextNode(value);
+        const close = document.createElement('a').addEventListener( 'click', function() {
+            console.log('usuniemy cię');
+        } );
 
-        frag = document.createDocumentFragment();
-        tag = document.createElement('button');
-
-        tag.textContent = value;
-
+        tag.appendChild(content);
         frag.appendChild(tag);
-        text.result.insertBefore(frag, text.result.firstChild);
-    },
+        result.insertBefore(frag, result.firstChild);
+    }
 
     getValue(e) {
-        var input = get('input'),
-            value = input.value;
+        const input = this.get('input');
+        const value = input.value;
 
         if (value.includes(',')) {
-            var a = value.split(',');
-            for (var i = 0; i < a.length; i += 1) {
-                text.createTag(a[i]);
+            let a = value.split(',');
+            for (let i = 0; i < a.length; i += 1) {
+                this.createTag(a[i]);
             }
         } else {
-            text.createTag(value);
+            this.createTag(value);
         }
 
         input.value = '';
 
-        // no bubble
         if (typeof e.stopPropagation === "function") {
             e.stopPropagation();
         }
         e.cancelBubble = true;
 
-        // prevent default action
         if (typeof e.preventDefault === "function") {
             e.preventDefault();
         }
@@ -43,10 +49,8 @@ var text = {
     }
 };
 
-function get(id) {
-    return document.getElementById(id);
-}
+const tag = new Tag();
 
-var send = get('send');
+const send = tag.get('send');
 
-send.addEventListener('click', text.getValue, false);
+send.addEventListener('click', (e) => { tag.getValue(e) }, false);

@@ -1,0 +1,61 @@
+ body { background-color: #FFFFFF;
+        color: #FFFAFA;
+        font-size: 1.125em;  /* 18px / 16px */
+        font-family: 'Offside', cursive;
+        text-align: center; 
+      }
+
+ a { text-decoration: none; }
+
+ ul { list-style: none; }
+
+ li { display: inline-block; }
+
+ header { width: 100%;
+          margin: 3% auto; 
+        }
+
+ h1 { font-size: 3.3125em;  /* 53px / 16px */
+      color: #000000;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.5); 
+    }
+
+ .wrap { width: 95%; }
+
+ #art  {  width: 45%;
+          float: right;
+          margin: 0 5%;
+        }
+
+ .profil { width: 35%;
+           float: left;
+           margin: 0 5%; 
+         }
+
+ fieldset { border: none; }
+
+ input { padding: 10px 15px;
+         color: #000000;
+         font-size: 0.875em;  /* 14px / 16px */
+         font-family: 'Offside', cursive;
+         border: none;
+         border-radius: 4px;
+         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+       }
+
+ button.place { font-size: 0.875em;  /* 14px / 16px */
+                font-family: 'Offside', cursive;
+                font-weight: bold;
+                border: none;
+                width: 40%;
+                padding: 5px 10px;
+                color: #FFFAF0;
+                background-color: #FF6347;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+              }
+
+ button.place:hover,
+ button.place:focus { background-color: #2E8B57; }
+
+ button { margin: 0 3px; }

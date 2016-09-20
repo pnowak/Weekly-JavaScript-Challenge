@@ -60,7 +60,6 @@ function savethestuffLocal() {
             localStorage.setItem(prop, get(prop).value);
         }
     }
-    getthestuffLocal();
 }
 
 function getthestuffLocal() {

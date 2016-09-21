@@ -2,9 +2,7 @@
 
 class Tag {
 
-    constructor() {
-        this.data = {}
-    }
+    constructor() {}
 
     get(id) {
         return document.getElementById(id);
@@ -18,11 +16,14 @@ class Tag {
         return new Promise(
             function(resolve, reject) {
                 tag.appendChild(content);
-                resolve(result.insertBefore(tag, result.firstChild))
+                resolve(result.insertBefore(tag, result.firstChild));
             }
         ).then(
             function(val) {
                 val.insertAdjacentHTML('beforeend', '<button class="close">x</button>');
+                return val;
+        }).then(
+            function(val) {
                 localStorage.setItem(val.textContent, val.textContent);
         })
         .catch(
@@ -36,8 +37,8 @@ class Tag {
         const parent = src.parentNode;
 
         if (src.nodeName.toLowerCase() === "button") {
-            localStorage.removeItem(parent.textContent, parent.textContent);
-            parent.parentNode.removeChild(parent);
+            localStorage.removeItem(parent.textContent);
+            parent.parentNode.removeChild(parent); 
         }
     }
 
@@ -74,13 +75,10 @@ class Tag {
         e.returnValue = false;
     }
 
-    getthestuffLocal() {
-        var data = JSON.parse(localStorage.data),
-            prop;
-        for (prop in data) {
-            if (data.hasOwnProperty(prop)) {
-                prop.value = localStorage.getItem(prop.value);
-            }
+    getLocal() {
+        let tags = JSON.parse(localStorage.tags);
+        for (let tag in tags) {
+            tag.textContent = localStorage.getItem(tag);
         }
     }
 };
@@ -93,4 +91,4 @@ const result = tag.get('result');
 send.addEventListener('click', (e) => { tag.getValue(e) }, false);
 result.addEventListener( 'click', (e) => { tag.closeTag(e) }, false);
 
-window.onload  = tag.getthestuffLocal();
+window.onload  = tag.getLocal();

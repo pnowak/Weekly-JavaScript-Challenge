@@ -64,7 +64,7 @@ function savethestuffLocal() {
 
 function getthestuffLocal() {
     var data = JSON.parse(localStorage.data),
-        prop;
+        prop; console.log(data);
     for (prop in data) {
         if (data.hasOwnProperty(prop)) {
             get(prop).value = localStorage.getItem(prop);

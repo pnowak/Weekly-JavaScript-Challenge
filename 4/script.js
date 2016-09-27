@@ -15,7 +15,14 @@ function getValue() {
     const value = input.value;
     const url = 'http://api.giphy.com/v1/gifs/search?q=' + value + '&api_key=dc6zaTOxFJmzC';
 
-    console.log(url);
+    fetch(url)
+        .then(status)
+        .then(json)
+        .then(function(data) {
+          console.log('Request succeeded with JSON response', data.data[1].images.looping.mp4);
+        }).catch(function(error) {
+          console.log('Request failed', error);
+        });
 }
 
 function status(response) {
@@ -29,16 +36,6 @@ function status(response) {
 function json(response) {
   return response.json();
 }
-
-fetch('http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC')
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log('Request succeeded with JSON response', data);
-  }).catch(function(error) {
-    console.log('Request failed', error);
-  });
-
 
 function get(id) {
     return document.getElementById(id);

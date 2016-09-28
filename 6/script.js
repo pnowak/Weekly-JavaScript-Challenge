@@ -2,8 +2,6 @@
 
 class Tag {
 
-    constructor() {}
-
     get(id) {
         return document.getElementById(id);
     }
@@ -63,16 +61,6 @@ class Tag {
         }
 
         input.value = '';
-
-        if (typeof e.stopPropagation === "function") {
-            e.stopPropagation();
-        }
-        e.cancelBubble = true;
-
-        if (typeof e.preventDefault === "function") {
-            e.preventDefault();
-        }
-        e.returnValue = false;
     }
 
     getLocal() {
